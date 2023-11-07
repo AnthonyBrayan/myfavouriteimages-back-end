@@ -22,6 +22,24 @@ namespace myfavouriteimages_back_end.Services
 
         }
 
+        public void UpdateImage(int id, Image updatedImage)
+        {
+            var existingImmage = _serviceContext.Image.FirstOrDefault(p => p.id == id);
+
+            if (existingImmage == null)
+            {
+
+                throw new InvalidOperationException("Image does not exist.");
+            }
+
+
+            existingImmage.title = updatedImage.title;
+            existingImmage.imageFavourite = updatedImage.imageFavourite;
+
+
+            _serviceContext.SaveChanges();
+        }
+
         public bool DeleteImage(int imageId)
         {
             var image = _serviceContext.Image.FirstOrDefault(u => u.id == imageId);

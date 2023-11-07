@@ -7,5 +7,6 @@ namespace myfavouriteimages_back_end.IServices
         int InsertImage(Image image);
         List<Image> GetAllImages();
         bool DeleteImage(int imageId);
+        void UpdateImage(int id, Image updatedImage);
     }
 }

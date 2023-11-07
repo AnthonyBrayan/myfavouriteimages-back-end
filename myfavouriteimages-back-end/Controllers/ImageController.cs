@@ -33,6 +33,14 @@ namespace myfavouriteimages_back_end.Controllers
             return _imageService.GetAllImages ();
         }
 
+        [HttpPut("{id}", Name = "Updateimage")]
+        public IActionResult Put([FromRoute] int id, [FromBody] Image updatedImage)
+        {
+            _imageService.UpdateImage(id, updatedImage);
+            return Ok(new { message = "Image successfully update" });
+        }
+
+
         [HttpDelete("{id}", Name = "DeleteImage")]
         public IActionResult Delete(int id)
         {
