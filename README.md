@@ -7,7 +7,7 @@
 - Creation Figma: https://www.figma.com/file/ifQoa6NhbdhQf4Z9cM7Qf2/Untitled?type=design&node-id=0%3A1&mode=design&t=CBKpd6tfcojlmQSM-1
 - Development of component structure for the creation of the requirement.
 - Develop the front-end using a FEI Appi for simulating server requests.
-- Development of the back-end: https://github.com/AnthonyBrayan/myfavouriteimages-back-end
+- Development of the front-end: [https://github.com/AnthonyBrayan/myfavouriteimages-back-end](https://github.com/AnthonyBrayan/myfavouriteimages-front-end.git)
 - Linking front-end with back-end.
 - Perform unit testing.
 
