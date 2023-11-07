@@ -32,7 +32,30 @@ namespace myfavouriteimages_back_end.Controllers
 
             return _imageService.GetAllImages ();
         }
- 
+
+        [HttpDelete("{id}", Name = "DeleteImage")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                var image = _serviceContext.Image.FirstOrDefault(u => u.id == id);
+
+                if (image == null)
+                {
+                    return StatusCode(404, "Image not found");
+                }
+
+                _serviceContext.Image.Remove(image);
+                _serviceContext.SaveChanges();
+
+                return Ok(new { message = "Image successfully deleted" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error deleting image: {ex.Message}");
+            }
+        }
+
 
 
 
