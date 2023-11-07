@@ -1,14 +1,3 @@
-//namespace TestProyect
-//{
-//    [TestClass]
-//    public class UnitTest1
-//    {
-//        [TestMethod]
-//        public void TestMethod1()
-//        {
-//        }
-//    }
-//}
 using Data;
 using Entitties;
 using myfavouriteimages_back_end.IServices;
